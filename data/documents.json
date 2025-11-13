@@ -10,7 +10,7 @@
   {
     "id": 2,
     "title": "Ресторан у Львові",
-    "content": "Ресторан італійської кухні в центрі Львова. Піца, паста, вино.",
+    "content": "Сімейний ресторан неподалік площі Ринок. Страви галицької кухні, жива музика ввечері.",
     "location": "Lviv",
     "category": "food",
     "time_tag": "evening"
@@ -33,34 +33,290 @@
   },
   {
     "id": 5,
-    "title": "Посібник з Python",
-    "content": "Базові конструкції, цикли, функції, робота з файлами на мові програмування Python.",
-    "location": "Online",
-    "category": "education",
-    "time_tag": "any"
-  },
-  {
-    "id": 6,
-    "title": "Курси машинного навчання",
-    "content": "Курс з основ машинного навчання та аналізу даних для початківців.",
-    "location": "Online",
-    "category": "education",
-    "time_tag": "any"
-  },
-  {
-    "id": 7,
-    "title": "Басейн у Києві",
-    "content": "Спортивний басейн з доріжками для плавання та тренування.",
+    "title": "Спортивний клуб у Києві",
+    "content": "Фітнес-клуб з тренажерною залою та басейном. Ранкові та вечірні тренування.",
     "location": "Kyiv",
     "category": "sport",
     "time_tag": "any"
   },
   {
-    "id": 8,
-    "title": "Фітнес-клуб у Львові",
-    "content": "Тренажерна зала, групові заняття, йога, кардіозона.",
+    "id": 6,
+    "title": "Футбольна школа у Львові",
+    "content": "Дитяча футбольна школа. Тренування у будні дні після обіду.",
     "location": "Lviv",
     "category": "sport",
+    "time_tag": "evening"
+  },
+  {
+    "id": 7,
+    "title": "Онлайн-курс з Python",
+    "content": "Базовий курс програмування на Python. Онлайн-лекції ввечері.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "evening"
+  },
+  {
+    "id": 8,
+    "title": "Курс веб-розробки у Києві",
+    "content": "Очний курс веб-розробки. Заняття вранці тричі на тиждень.",
+    "location": "Kyiv",
+    "category": "education",
+    "time_tag": "morning"
+  },
+  {
+    "id": 9,
+    "title": "Кав'ярня біля вокзалу Львова",
+    "content": "Кав'ярня з ранковими сніданками та швидким Wi-Fi.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "morning"
+  },
+  {
+    "id": 10,
+    "title": "Студія йоги у Києві",
+    "content": "Заняття йогою вранці та ввечері для всіх рівнів.",
+    "location": "Kyiv",
+    "category": "sport",
     "time_tag": "any"
+  },
+  {
+    "id": 11,
+    "title": "Ранкові новини світу",
+    "content": "Дайджест міжнародних новин за ніч.",
+    "location": "World",
+    "category": "news",
+    "time_tag": "morning"
+  },
+  {
+    "id": 12,
+    "title": "Вечірні новини України",
+    "content": "Підсумковий випуск новин України за день.",
+    "location": "Ukraine",
+    "category": "news",
+    "time_tag": "evening"
+  },
+  {
+    "id": 13,
+    "title": "Онлайн-курс з машинного навчання",
+    "content": "Поглиблений ML-курс. Лекції у записі, вечірні вебінари.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "any"
+  },
+  {
+    "id": 14,
+    "title": "Спортзал біля Академмістечка",
+    "content": "Тренажерний зал з груповими тренуваннями.",
+    "location": "Kyiv",
+    "category": "sport",
+    "time_tag": "evening"
+  },
+  {
+    "id": 15,
+    "title": "Вулична їжа у Львові",
+    "content": "Фудкорт з бургерами, хот-догами та локальною кухнею.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "any"
+  },
+  {
+    "id": 16,
+    "title": "Кафе для роботи в Києві",
+    "content": "Кафе з розетками, Wi-Fi та бізнес-ланчами.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "any"
+  },
+  {
+    "id": 17,
+    "title": "Китайська кухня у Києві",
+    "content": "Ресторан китайської кухні. Працює ввечері.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 18,
+    "title": "Суші-бар у Львові",
+    "content": "Суші-бар поряд з центром. Доставка зранку та ввечері.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "any"
+  },
+  {
+    "id": 19,
+    "title": "IT-новини світу",
+    "content": "Головні новини технологій за день.",
+    "location": "World",
+    "category": "news",
+    "time_tag": "evening"
+  },
+  {
+    "id": 20,
+    "title": "Спортивні події України",
+    "content": "Календар футбольних та боксерських матчів.",
+    "location": "Ukraine",
+    "category": "sport",
+    "time_tag": "any"
+  },
+  {
+    "id": 21,
+    "title": "Курс дизайну онлайн",
+    "content": "Основи графічного дизайну, відеоуроки.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "any"
+  },
+  {
+    "id": 22,
+    "title": "Курс англійської у Львові",
+    "content": "Англійська для початківців. Заняття ввечері.",
+    "location": "Lviv",
+    "category": "education",
+    "time_tag": "evening"
+  },
+  {
+    "id": 23,
+    "title": "Пекарня у Києві",
+    "content": "Свіжа випічка зранку: круасани, булочки, кава.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "morning"
+  },
+  {
+    "id": 24,
+    "title": "Барбершоп у Львові",
+    "content": "Стрижки та догляд за бородою. Працюють вечорами.",
+    "location": "Lviv",
+    "category": "service",
+    "time_tag": "evening"
+  },
+  {
+    "id": 25,
+    "title": "Салон краси в Києві",
+    "content": "Манікюр, стрижки, косметологія.",
+    "location": "Kyiv",
+    "category": "service",
+    "time_tag": "any"
+  },
+  {
+    "id": 26,
+    "title": "Магазин техніки у Києві",
+    "content": "Комп'ютери, смартфони, периферія.",
+    "location": "Kyiv",
+    "category": "market",
+    "time_tag": "any"
+  },
+  {
+    "id": 27,
+    "title": "Супермаркет у Львові",
+    "content": "Продукти, кулінарія, домашні товари.",
+    "location": "Lviv",
+    "category": "market",
+    "time_tag": "any"
+  },
+  {
+    "id": 28,
+    "title": "Піцерія в Києві",
+    "content": "Піца на дровах. Кращий варіант на вечір.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 29,
+    "title": "Піцерія у Львові",
+    "content": "Сучасна піцерія в центрі, працює до 23:00.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 30,
+    "title": "Ранковий спорт у Києві",
+    "content": "Ранкові тренування з фітнесу в парку.",
+    "location": "Kyiv",
+    "category": "sport",
+    "time_tag": "morning"
+  },
+  {
+    "id": 31,
+    "title": "Вечірня йога у Львові",
+    "content": "Групова йога у студії, рівень — для всіх.",
+    "location": "Lviv",
+    "category": "sport",
+    "time_tag": "evening"
+  },
+  {
+    "id": 32,
+    "title": "Курс 3D-моделювання онлайн",
+    "content": "Blender, Maya, основи моделювання.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "any"
+  },
+  {
+    "id": 33,
+    "title": "Курс UI/UX у Києві",
+    "content": "Очні заняття вранці та онлайн увечері.",
+    "location": "Kyiv",
+    "category": "education",
+    "time_tag": "evening"
+  },
+  {
+    "id": 34,
+    "title": "Новини Львова",
+    "content": "Місцеві події міста Львова.",
+    "location": "Lviv",
+    "category": "news",
+    "time_tag": "any"
+  },
+  {
+    "id": 35,
+    "title": "Новини Києва",
+    "content": "Короткі новини столиці.",
+    "location": "Kyiv",
+    "category": "news",
+    "time_tag": "any"
+  },
+  {
+    "id": 36,
+    "title": "Онлайн-магазин техніки",
+    "content": "Смартфони, ноутбуки, доставка по всій Україні.",
+    "location": "Online",
+    "category": "market",
+    "time_tag": "any"
+  },
+  {
+    "id": 37,
+    "title": "Курс з кібербезпеки",
+    "content": "Основи безпеки, мережі, атаки та захист.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "evening"
+  },
+  {
+    "id": 38,
+    "title": "Бургерна у Києві",
+    "content": "Бургери, нагетси, картопля фрі, працюють до ночі.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 39,
+    "title": "Бургерна у Львові",
+    "content": "Авторські бургери, craft-напої.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "any"
+  },
+  {
+    "id": 40,
+    "title": "Ранковий дайджест подій України",
+    "content": "Короткий огляд ключових ранкових новин.",
+    "location": "Ukraine",
+    "category": "news",
+    "time_tag": "morning"
   }
 ]
