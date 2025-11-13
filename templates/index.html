@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Контекстно-залежний пошук</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Система контекстно-залежного пошуку</h1>
+
+    <section class="context">
+        <h2>Поточний контекст</h2>
+        <ul>
+            <li><strong>Локація:</strong> {{ context_info.location }}</li>
+            <li><strong>Часовий сегмент:</strong> {{ context_info.time_segment }}</li>
+            <li><strong>Системний час:</strong> {{ context_info.system_time }}</li>
+            <li><strong>Історія запитів:</strong>
+                {% if context_info.query_history %}
+                    <ul>
+                        {% for q in context_info.query_history %}
+                            <li>{{ q }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    (порожня)
+                {% endif %}
+            </li>
+        </ul>
+    </section>
+
+    <section class="search-form">
+        <h2>Пошук</h2>
+        <form method="post">
+            <div class="form-row">
+                <label for="query">Запит:</label>
+                <input type="text" id="query" name="query" value="{{ query }}" required>
+            </div>
+
+            <div class="form-row">
+                <label for="location">Локація:</label>
+                <select id="location" name="location">
+                    <option value="Kyiv" {% if context_info.location == "Kyiv" %}selected{% endif %}>Kyiv</option>
+                    <option value="Lviv" {% if context_info.location == "Lviv" %}selected{% endif %}>Lviv</option>
+                    <option value="Ukraine" {% if context_info.location == "Ukraine" %}selected{% endif %}>Ukraine</option>
+                    <option value="World" {% if context_info.location == "World" %}selected{% endif %}>World</option>
+                    <option value="Online" {% if context_info.location == "Online" %}selected{% endif %}>Online</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="time_segment">Часовий контекст:</label>
+                <select id="time_segment" name="time_segment">
+                    <option value="any" {% if context_info.time_segment == "any" %}selected{% endif %}>Будь-який</option>
+                    <option value="morning" {% if context_info.time_segment == "morning" %}selected{% endif %}>Ранок</option>
+                    <option value="evening" {% if context_info.time_segment == "evening" %}selected{% endif %}>Вечір</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Шукати</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="results">
+    <div class="column classic">
+        <h2>Класичний пошук</h2>
+        {% if basic_results %}
+            <ol>
+                {% for item in basic_results %}
+                    <li>
+                        <div class="result-card">
+                            <h3>[{{ item.doc.id }}] {{ item.doc.title }}</h3>
+                            <p class="meta">
+                                location={{ item.doc.location }},
+                                category={{ item.doc.category }},
+                                time_tag={{ item.doc.time_tag }}
+                            </p>
+                            <p class="score">base_score={{ "%.2f"|format(item.base_score) }}</p>
+                            <p class="content">{{ item.doc.content }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <p>Немає результатів (введіть запит).</p>
+        {% endif %}
+    </div>
+
+    <div class="column context">
+        <h2>Контекстний пошук</h2>
+        {% if context_results %}
+            <ol>
+                {% for item in context_results %}
+                    <li>
+                        <div class="result-card">
+                            <h3>[{{ item.doc.id }}] {{ item.doc.title }}</h3>
+                            <p class="meta">
+                                location={{ item.doc.location }},
+                                category={{ item.doc.category }},
+                                time_tag={{ item.doc.time_tag }}
+                            </p>
+                            <p class="score">
+                                base_score={{ "%.2f"|format(item.base_score) }},
+                                final_score={{ "%.2f"|format(item.final_score) }}
+                            </p>
+                            <p class="context-info">
+                                context:
+                                matched_location={{ item.context_info.matched_location }},
+                                time_segment={{ item.context_info.time_segment }},
+                                doc_time_tag={{ item.context_info.doc_time_tag }},
+                                category_weight={{ "%.2f"|format(item.context_info.category_weight) }}
+                            </p>
+                            <p class="content">{{ item.doc.content }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <p>Немає результатів (введіть запит).</p>
+        {% endif %}
+    </div>
+</section>
+
+</div>
+</body>
+</html>

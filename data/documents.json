@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Кафе в центрі Києва",
+    "content": "Затишне кафе біля метро Майдан Незалежності. Українська кухня, кава, десерти.",
+    "location": "Kyiv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 2,
+    "title": "Ресторан у Львові",
+    "content": "Ресторан італійської кухні в центрі Львова. Піца, паста, вино.",
+    "location": "Lviv",
+    "category": "food",
+    "time_tag": "evening"
+  },
+  {
+    "id": 3,
+    "title": "Ранкові новини України",
+    "content": "Огляд головних подій в Україні за ранок.",
+    "location": "Ukraine",
+    "category": "news",
+    "time_tag": "morning"
+  },
+  {
+    "id": 4,
+    "title": "Вечірні новини світу",
+    "content": "Підсумок світових подій за день.",
+    "location": "World",
+    "category": "news",
+    "time_tag": "evening"
+  },
+  {
+    "id": 5,
+    "title": "Посібник з Python",
+    "content": "Базові конструкції, цикли, функції, робота з файлами на мові програмування Python.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "any"
+  },
+  {
+    "id": 6,
+    "title": "Курси машинного навчання",
+    "content": "Курс з основ машинного навчання та аналізу даних для початківців.",
+    "location": "Online",
+    "category": "education",
+    "time_tag": "any"
+  },
+  {
+    "id": 7,
+    "title": "Басейн у Києві",
+    "content": "Спортивний басейн з доріжками для плавання та тренування.",
+    "location": "Kyiv",
+    "category": "sport",
+    "time_tag": "any"
+  },
+  {
+    "id": 8,
+    "title": "Фітнес-клуб у Львові",
+    "content": "Тренажерна зала, групові заняття, йога, кардіозона.",
+    "location": "Lviv",
+    "category": "sport",
+    "time_tag": "any"
+  }
+]
