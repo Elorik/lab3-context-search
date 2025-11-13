@@ -15,17 +15,20 @@
             <li><strong>Локація:</strong> {{ context_info.location }}</li>
             <li><strong>Часовий сегмент:</strong> {{ context_info.time_segment }}</li>
             <li><strong>Системний час:</strong> {{ context_info.system_time }}</li>
-            <li><strong>Історія запитів:</strong>
-                {% if context_info.query_history %}
-                    <ul>
-                        {% for q in context_info.query_history %}
-                            <li>{{ q }}</li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    (порожня)
-                {% endif %}
-            </li>
+            <li><details class="history-details">
+        <summary><strong>Історія запитів</strong> (останні {{ context_info.query_history|length }})</summary>
+        {% if context_info.query_history %}
+            <ul class="history-list">
+                {% for q in context_info.query_history %}
+                    <li>{{ q }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="history-empty">(порожня)</p>
+        {% endif %}
+    </details>
+</li>
+
         </ul>
     </section>
 

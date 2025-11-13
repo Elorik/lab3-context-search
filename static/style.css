@@ -265,3 +265,49 @@ h2 {
     width: auto;
   }
 }
+
+.history-details {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.history-details > summary {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+
+.history-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.history-details > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 12px;
+  transform-origin: center;
+  transition: transform 0.15s ease-out;
+}
+
+.history-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.history-list {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  max-height: 120px; /* обмеження по висоті */
+  overflow-y: auto; /* скрол всередині */
+}
+
+.history-list li {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.history-empty {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}

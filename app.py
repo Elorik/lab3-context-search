@@ -47,7 +47,7 @@ def index():
     context_info = {
         "location": user_context.location,
         "time_segment": user_context.time_segment,
-        "query_history": user_context.query_history[-10:],  # останні 10
+        "query_history": user_context.query_history[-10:], 
         "system_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
